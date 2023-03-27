@@ -119,13 +119,10 @@ echo " " >> $LOG
 echo "#----------------------------------------------------#" >> $LOG
 echo "Sincronizando arquivos de BACKUP com TeraStation 1:" >> $LOG
 echo "#----------------------------------------------------#" >> $LOG
-#echo "   Ainda não funciona " >> $LOG
-## rsync -Cravpu --delete $PastaBackup backup@10.89.136.26:/home/backup >> $LOG
-# smbclient //10.24.172.6/sec_infor --user=admin --pass cpdsp4d -c "put $PastaBackup BK_SPED"
 echo $PastaBackup
 sleep 2
 cd /root/Desktop/BackupSPED
-smbclient //10.24.172.6/sec_infor --user=admin --pass dna,Pncadm3 -c "recurse; prompt; cd BK_SPED; mput $(date +%Y-%m-%d)*" >> $LOG
+smbclient *****/***** --user=admin --pass ******* -c "recurse; prompt; cd BK_SPED; mput $(date +%Y-%m-%d)*" >> $LOG
 
 sleep 10
 
